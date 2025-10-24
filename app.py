@@ -146,13 +146,18 @@ if uploaded_file:
 
     st.info("🔍 Classifying document...")
     rules = [
-        ClassifierRule(type="invoice", description="Contains invoice number, date, and total."),
-        ClassifierRule(type="receipt", description="Contains purchase info."),
-        ClassifierRule(type="resume", description="Contains skills, education, and experience."),
-        ClassifierRule(type="aadhaar", description="Contains 12-digit Aadhaar number and address."),
-        ClassifierRule(type="pan", description="Contains PAN number and name."),
-        ClassifierRule(type="bank", description="Contains transaction details and account number."),
-    ]
+    ClassifierRule(type="invoice", description="Contains invoice number, date, and total."),
+    ClassifierRule(type="receipt", description="Contains purchase info."),
+    ClassifierRule(type="resume", description="Contains skills, education, and experience."),
+    ClassifierRule(type="aadhaar", description="Contains 12-digit Aadhaar number and address."),
+    ClassifierRule(type="pan", description="Contains PAN number and name."),
+    ClassifierRule(type="bank", description="Contains transaction details and account number."),
+    ClassifierRule(type="coverletter", description="Contains candidate details, company, position, and summary."),
+    ClassifierRule(type="labreport", description="Contains patient name, test name, result, normal range, and date."),
+    ClassifierRule(type="prescription", description="Contains doctor name, patient name, medicines, dosage, and date."),
+    ClassifierRule(type="medicalrecord", description="Contains patient name, diagnosis, treatment, doctor name, and date."),
+]
+
     parsing = ClassifyParsingConfiguration(lang=ParserLanguages.EN, max_pages=5)
 
     results = classify_client.classify_file_paths(
