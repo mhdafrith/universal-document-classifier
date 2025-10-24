@@ -1,0 +1,10 @@
+streamlit
+python-dotenv
+pillow
+pypdf2
+docx
+langchain
+llama-parse
+groq
+pandas
+numpy
