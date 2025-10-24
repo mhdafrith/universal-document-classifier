@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 # Load API key
 # --------------------------
 load_dotenv()
-LLAMA_API_KEY = os.getenv("LLAMA_CLOUD_API_KEY")
+LLAMA_API_KEY = st.secrets["LLAMA_API_KEY"]
 
 client = AsyncLlamaCloud(token=LLAMA_API_KEY)
 project_id = "42da2f89-2702-426f-b41f-0440b3858bdd"
