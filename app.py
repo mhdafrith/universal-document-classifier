@@ -16,7 +16,7 @@ LLAMA_API_KEY = st.secrets["LLAMA_API_KEY"]
 client = AsyncLlamaCloud(token=LLAMA_API_KEY)
 project_id = "42da2f89-2702-426f-b41f-0440b3858bdd"
 organization_id = "e7103cc5-2717-4a01-abc3-f7ea6fc579b9"
-classify_client = ClassifyClient(client, project_id=project_id, organization_id=organization_id)
+classify_client = ClassifyClient(client, project_id=project_id)
 extractor = LlamaExtract(api_key=LLAMA_API_KEY)
 
 
